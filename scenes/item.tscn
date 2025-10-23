@@ -11,3 +11,5 @@ item = ExtResource("2_s8enn")
 custom_minimum_size = Vector2(100, 100)
 offset_right = 40.0
 offset_bottom = 40.0
+expand_mode = 3
+stretch_mode = 4

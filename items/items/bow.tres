@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://dfw6gglxfka5"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dfw6gglxfka5"]
 
 [ext_resource type="Script" uid="uid://cksl4fl7e7k4j" path="res://items/itemClass.gd" id="1_pawp3"]
+[ext_resource type="Texture2D" uid="uid://1jpmfqdm2ap5" path="res://assets/longBow.png" id="1_yf0wb"]
 
 [resource]
 script = ExtResource("1_pawp3")
 name = "Długi łuk"
 description = "Długi łuk, idealny do walki na duże dystanse"
 character_class = "Ranger"
+icon = ExtResource("1_yf0wb")
 rarity = "common"
 metadata/_custom_type_script = "uid://cksl4fl7e7k4j"

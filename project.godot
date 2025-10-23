@@ -15,6 +15,10 @@ run/main_scene="uid://c6s2aytv21m2k"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PopupManager="*res://scenes/popup_manager.tscn"
+
 [display]
 
 window/size/viewport_width=1600
@@ -23,6 +27,7 @@ window/size/viewport_height=900
 [file_customization]
 
 folder_colors={
+"res://assets/": "blue",
 "res://items/": "yellow",
 "res://items/items/": "orange"
 }

@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bquyv60srgf2b"]
+
+[ext_resource type="Script" uid="uid://dcngmmydmni3c" path="res://scripts/item_tool_tip.gd" id="1_6qyvh"]
+[ext_resource type="Script" uid="uid://bciq0eulm2ve8" path="res://scripts/popup_manager.gd" id="1_jooo1"]
+
+[node name="PopupManager" type="CanvasLayer"]
+script = ExtResource("1_jooo1")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ItemToolTip" type="PanelContainer" parent="Root"]
+visible = false
+layout_mode = 0
+offset_right = 201.0
+offset_bottom = 166.0
+script = ExtResource("1_6qyvh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/ItemToolTip"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="Root/ItemToolTip/VBoxContainer"]
+layout_mode = 2
+
+[node name="description" type="RichTextLabel" parent="Root/ItemToolTip/VBoxContainer"]
+layout_mode = 2
+
+[node name="additionalInfo" type="RichTextLabel" parent="Root/ItemToolTip/VBoxContainer"]
+layout_mode = 2
+
+[node name="upgradeDialog" type="ConfirmationDialog" parent="Root"]
+ok_button_text = "upgrade"
+dialog_text = "You really want to upgrade the item?"
+cancel_button_text = "cancel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/upgradeDialog"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Root/upgradeDialog/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Root/upgradeDialog/VBoxContainer"]
+layout_mode = 2

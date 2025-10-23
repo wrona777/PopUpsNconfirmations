@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cl6m2mlvjma3n"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cl6m2mlvjma3n"]
 
+[ext_resource type="Texture2D" uid="uid://cjyfw5n3s70vl" path="res://assets/sword.png" id="1_a4wnc"]
 [ext_resource type="Script" uid="uid://cksl4fl7e7k4j" path="res://items/itemClass.gd" id="1_gcyhf"]
 
 [resource]
@@ -8,5 +9,6 @@ name = "miecz"
 cost = 20
 description = "Długi miecz o tępym ostrzu"
 character_class = "warrior"
+icon = ExtResource("1_a4wnc")
 rarity = "common"
 metadata/_custom_type_script = "uid://cksl4fl7e7k4j"
