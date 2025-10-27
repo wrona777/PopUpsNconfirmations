@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://crf8f35wxvmls"]
+
+[ext_resource type="Script" uid="uid://bslx0m1ef05bc" path="res://scripts/item.gd" id="1_4gq7n"]
+[ext_resource type="Resource" uid="uid://dfw6gglxfka5" path="res://items/items/bow.tres" id="2_s8enn"]
+
+[node name="Item" type="Node2D"]
+script = ExtResource("1_4gq7n")
+item = ExtResource("2_s8enn")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 3
+stretch_mode = 4

@@ -1,16 +1,13 @@
 extends CanvasLayer
 
-@onready var _root: Control = $Root
-@onready var _tooltip: Node = $Root/ItemToolTip
-@onready var _upgrade: Node = $Root/upgradeDialog
+@onready var tooltip: PanelContainer = $Root/ItemToolTip
 
-func show_item_tooltip(item: Item, a_owner: Control) -> void:
-	if a_owner == null or item == null:
+func show_item_tooltip(_owner: Control, item: Item) -> void:
+	if tooltip == null or item == null:
 		return
-	_tooltip.set_item(item)
-	var r: Rect2 = a_owner.get_global_rect()
-	var anchor := Vector2(r.position.x + r.size.x * 0.5, r.position.y)
-	_tooltip.show_at(anchor)
+	tooltip.show_tooltip(item)
 
-func hide_item_tooltip() -> void:
-	_tooltip.hide_tooltip()
+func hide_item_tooltip(_owner: Control) -> void:
+	if tooltip == null:
+		return
+	tooltip.hide_tooltip()

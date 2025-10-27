@@ -18,8 +18,8 @@ mouse_filter = 2
 [node name="ItemToolTip" type="PanelContainer" parent="Root"]
 visible = false
 layout_mode = 0
-offset_right = 201.0
-offset_bottom = 166.0
+offset_right = 357.0
+offset_bottom = 203.0
 script = ExtResource("1_6qyvh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Root/ItemToolTip"]
@@ -29,9 +29,11 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="description" type="RichTextLabel" parent="Root/ItemToolTip/VBoxContainer"]
+custom_minimum_size = Vector2(50, 20)
 layout_mode = 2
 
 [node name="additionalInfo" type="RichTextLabel" parent="Root/ItemToolTip/VBoxContainer"]
+custom_minimum_size = Vector2(50, 20)
 layout_mode = 2
 
 [node name="upgradeDialog" type="ConfirmationDialog" parent="Root"]
