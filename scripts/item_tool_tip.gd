@@ -1,8 +1,8 @@
 extends PanelContainer
 
-@onready var _name: Label = $VBoxContainer/name
-@onready var _desc: RichTextLabel = $VBoxContainer/description
-@onready var _meta: RichTextLabel = $VBoxContainer/additionalInfo
+@onready var _name: Label = $MarginContainer/VBoxContainer/name
+@onready var _desc: RichTextLabel = $MarginContainer/VBoxContainer/description
+@onready var _meta: RichTextLabel = $MarginContainer/VBoxContainer/additionalInfo
 
 const PADDING := Vector2(10, 10)
 

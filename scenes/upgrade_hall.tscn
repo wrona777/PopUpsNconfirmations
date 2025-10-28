@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4mgy07jbupjm"]
+
+[ext_resource type="Script" uid="uid://dw80lbmpklruc" path="res://scripts/upgrade_hall.gd" id="1_00wn4"]
+
+[node name="UpgradeHall" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_00wn4")
+
+[node name="UpgradeInterface" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -450.0
+offset_bottom = 450.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0.31828964, 0.11859267, 0.15938556, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="UpgradeInterface"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UpgradeInterface/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Name" type="Label" parent="UpgradeInterface/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "name"
+
+[node name="UpgareSquare" type="ColorRect" parent="UpgradeInterface/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 2
+size_flags_horizontal = 4
+color = Color(0.06053035, 0.06053035, 0.060530342, 1)
+
+[node name="Cost" type="Label" parent="UpgradeInterface/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+text = "cost"
+
+[node name="upgradeBtn" type="Button" parent="UpgradeInterface/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+disabled = true
+text = "Upgrade"
