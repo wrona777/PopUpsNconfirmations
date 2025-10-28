@@ -44,19 +44,21 @@ theme_override_constants/separation = 30
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 50
-text = "name"
 
 [node name="UpgareSquare" type="ColorRect" parent="UpgradeInterface/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(110, 110)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
 color = Color(0.06053035, 0.06053035, 0.060530342, 1)
+
+[node name="Marker2D" type="Marker2D" parent="UpgradeInterface/MarginContainer/VBoxContainer/UpgareSquare"]
+position = Vector2(55, 55)
 
 [node name="Cost" type="Label" parent="UpgradeInterface/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 50
-text = "cost"
 
 [node name="upgradeBtn" type="Button" parent="UpgradeInterface/MarginContainer/VBoxContainer"]
 layout_mode = 2
