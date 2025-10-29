@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bquyv60srgf2b"]
+[gd_scene load_steps=4 format=3 uid="uid://bquyv60srgf2b"]
 
 [ext_resource type="Script" uid="uid://dcngmmydmni3c" path="res://scripts/item_tool_tip.gd" id="1_6qyvh"]
 [ext_resource type="Script" uid="uid://bciq0eulm2ve8" path="res://scripts/popup_manager.gd" id="1_jooo1"]
+[ext_resource type="Script" uid="uid://dnw11m0g81x1w" path="res://scripts/upgrade_dialog.gd" id="3_ylun0"]
 
 [node name="PopupManager" type="CanvasLayer"]
 script = ExtResource("1_jooo1")
@@ -56,16 +57,28 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="upgradeDialog" type="ConfirmationDialog" parent="Root"]
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(301, 106)
+visible = true
 ok_button_text = "upgrade"
-dialog_text = "You really want to upgrade the item?"
 cancel_button_text = "cancel"
+script = ExtResource("3_ylun0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Root/upgradeDialog"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 293.0
+offset_bottom = 57.0
 
 [node name="Label" type="Label" parent="Root/upgradeDialog/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Root/upgradeDialog/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1

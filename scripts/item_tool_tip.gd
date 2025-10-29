@@ -8,7 +8,6 @@ const PADDING := Vector2(10, 10)
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	#_delay.timeout.connect(_on_delay_timeout)
 
 func _process(_delta):
 	if visible:
@@ -18,7 +17,7 @@ func set_item(item: Item) -> void:
 	if item == null:
 		hide()
 		return
-	_name.text = item.name
+	_name.text = item.get_display_name()
 	_desc.bbcode_enabled = true
 	_desc.bbcode_text = item.description
 	_meta.text = "Lv.%d  •  Cost: %d" % [item.level, item.upgrade_cost]

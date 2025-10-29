@@ -38,8 +38,8 @@ func _on_item_clicked(node, item: Item) -> void:
 		is_being_upgraded = true
 		item_setter(item)
 
-func item_setter(item:Item) -> void:
-	name_label.text = item.name
+func item_setter(item: Item) -> void:
+	name_label.text = item.get_display_name()
 	cost_label.text = str(item.upgrade_cost)
 	upgrade_btn.disabled = false
 
@@ -47,3 +47,21 @@ func reset() -> void:
 	name_label.text = ""
 	cost_label.text = ""
 	upgrade_btn.disabled = true
+
+func _on_upgrade_btn_pressed() -> void:
+	var a_item = current_item.item
+
+	var ok := await PopupManager.confirm({
+		"title": "Ulepszenie " + a_item.name,
+		"header": "Na pewno chcesz ulepszyć ten przedmiot?",
+		"body": "Koszt: " + str(a_item.upgrade_cost),
+		"accept_text": "Ulepsz",
+		"cancel_text": "Anuluj"
+	})
+
+	if ok:
+		a_item.level += 1
+	else:
+		print("Anulowano.")
+	
+	item_setter(a_item)

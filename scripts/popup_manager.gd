@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var tooltip: PanelContainer = $Root/ItemToolTip
+@onready var dialog: UpgradeDialog = $Root/upgradeDialog
 
 func show_item_tooltip(_owner: Control, item: Item) -> void:
 	if tooltip == null or item == null:
@@ -9,5 +10,8 @@ func show_item_tooltip(_owner: Control, item: Item) -> void:
 
 func hide_item_tooltip(_owner: Control) -> void:
 	if tooltip == null:
-		return
+		return	 
 	tooltip.hide_tooltip()
+
+func confirm(opts: Dictionary) -> bool:
+	return await dialog.confirm(opts)

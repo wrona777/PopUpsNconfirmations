@@ -66,3 +66,5 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 50
 disabled = true
 text = "Upgrade"
+
+[connection signal="pressed" from="UpgradeInterface/MarginContainer/VBoxContainer/upgradeBtn" to="." method="_on_upgrade_btn_pressed"]
